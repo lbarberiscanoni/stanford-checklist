@@ -14,6 +14,14 @@ var _reactDom = require("react-dom");
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _GeneralWarning = require("./GeneralWarning");
+
+var _GeneralWarning2 = _interopRequireDefault(_GeneralWarning);
+
+var _List = require("./List");
+
+var _List2 = _interopRequireDefault(_List);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22,31 +30,38 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Title = function (_React$Component) {
-    _inherits(Title, _React$Component);
+var Page = function (_React$Component) {
+    _inherits(Page, _React$Component);
 
-    function Title(props) {
-        _classCallCheck(this, Title);
+    function Page(props) {
+        _classCallCheck(this, Page);
 
-        return _possibleConstructorReturn(this, (Title.__proto__ || Object.getPrototypeOf(Title)).call(this, props));
+        return _possibleConstructorReturn(this, (Page.__proto__ || Object.getPrototypeOf(Page)).call(this, props));
     }
 
-    _createClass(Title, [{
+    _createClass(Page, [{
         key: "render",
         value: function render() {
             return _react2.default.createElement(
                 "div",
-                { className: "row" },
+                null,
                 _react2.default.createElement(
                     "h1",
-                    { className: "text-center" },
-                    this.props.text
-                )
+                    null,
+                    this.props.diagnosis
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "By Stanford Anesthesia Cognitive Aid Group"
+                ),
+                _react2.default.createElement(_GeneralWarning2.default, null),
+                _react2.default.createElement(_List2.default, { type: "informational", legend: "Immediate", elements: this.props.bro })
             );
         }
     }]);
 
-    return Title;
+    return Page;
 }(_react2.default.Component);
 
-exports.default = Title;
+exports.default = Page;

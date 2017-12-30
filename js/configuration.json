@@ -1,0 +1,28 @@
+[
+    {
+        "diagnosis": "full name A",
+        "location": "shortened name",
+        "signs": "",
+        "immediate": "",
+        "diagnosis": "",
+        "secondary": "",
+        "details": "",
+        "check": "",
+        "consider": "",
+        "rule-out": "",
+        "post-event": ""
+    },
+    {
+        "diagnosis": "full name B",
+        "location": "shortened name",
+        "signs": "",
+        "immediate": "",
+        "diagnosis": "",
+        "secondary": "",
+        "details": "",
+        "check": "",
+        "consider": "",
+        "rule-out": "",
+        "post-event": ""
+    }
+]

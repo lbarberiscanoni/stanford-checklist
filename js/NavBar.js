@@ -14,6 +14,10 @@ var _reactDom = require("react-dom");
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _configuration = require("./configuration.json");
+
+var _configuration2 = _interopRequireDefault(_configuration);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32,30 +36,25 @@ var NavBar = function (_React$Component) {
     }
 
     _createClass(NavBar, [{
-        key: "navigate",
-        value: function navigate(location) {
-            this.props.navigate(location);
-        }
-    }, {
         key: "render",
         value: function render() {
-            var _this2 = this;
-
-            var sections = ["home", "lab", "bio", "research", "students"];
             var nav_components = [];
-            sections.map(function (x) {
+            _configuration2.default.forEach(function (x) {
+                console.log(x);
                 nav_components.push(_react2.default.createElement(
-                    "li",
-                    { className: "btn btn-default", onClick: _this2.navigate.bind(_this2, x) },
-                    " ",
-                    x,
-                    " "
+                    "h5",
+                    null,
+                    " x[\"diagnosis\"] "
                 ));
             });
             return _react2.default.createElement(
-                "nav",
-                { className: "nav nav-tabs nav-justified" },
-                nav_components
+                "div",
+                null,
+                _react2.default.createElement(
+                    "h1",
+                    null,
+                    "NavBar "
+                )
             );
         }
     }]);

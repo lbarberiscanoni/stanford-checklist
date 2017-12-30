@@ -22,49 +22,83 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var RightBanner = function (_React$Component) {
-    _inherits(RightBanner, _React$Component);
+var List = function (_React$Component) {
+    _inherits(List, _React$Component);
 
-    function RightBanner(props) {
-        _classCallCheck(this, RightBanner);
+    function List(props) {
+        _classCallCheck(this, List);
 
-        return _possibleConstructorReturn(this, (RightBanner.__proto__ || Object.getPrototypeOf(RightBanner)).call(this, props));
+        return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).call(this, props));
     }
 
-    _createClass(RightBanner, [{
+    _createClass(List, [{
         key: "render",
         value: function render() {
+            var items = [];
+            switch (this.props.type) {
+                case "checklist":
+                    this.props.elements.map(function (x) {
+                        items.push(_react2.default.createElement(
+                            "li",
+                            null,
+                            _react2.default.createElement("input", { type: "checkbox" }),
+                            _react2.default.createElement(
+                                "label",
+                                null,
+                                " ",
+                                x,
+                                " "
+                            )
+                        ));
+                    });
+                    break;
+                case "signs":
+                    this.props.elements.map(function (x) {
+                        items.push(_react2.default.createElement(
+                            "li",
+                            null,
+                            " ",
+                            x,
+                            " "
+                        ));
+                    });
+                    break;
+                case "informational":
+                    this.props.elements.map(function (x) {
+                        items.push(_react2.default.createElement(
+                            "li",
+                            null,
+                            " ",
+                            x,
+                            " "
+                        ));
+                    });
+                    break;
+            }
+
             return _react2.default.createElement(
-                "div",
-                null,
+                "form",
+                { className: this.props.type },
                 _react2.default.createElement(
-                    "a",
-                    { href: "https://www.clemson.edu/cbshs/departments/psychology/", target: "_blank" },
+                    "fieldset",
+                    null,
                     _react2.default.createElement(
-                        "h3",
+                        "legend",
                         null,
-                        "Clemson Psychology Department"
-                    )
-                ),
-                _react2.default.createElement(
-                    "a",
-                    { href: "http://newsstand.clemson.edu/mediarelations/psychology-researcher-to-use-grant-to-improve-teamwork-across-disciplines/", target: "_blank" },
+                        this.props.legend,
+                        " "
+                    ),
                     _react2.default.createElement(
-                        "h3",
+                        "ol",
                         null,
-                        "NSF CAREER Grant Awarded to DIGITAL Lab!"
+                        items
                     )
-                ),
-                _react2.default.createElement(
-                    "div",
-                    { className: "embed-responsive embed-responsive-4by3" },
-                    _react2.default.createElement("iframe", { className: "embed-responsive-item", src: "assets/research_rock_stars.mp4" })
                 )
             );
         }
     }]);
 
-    return RightBanner;
+    return List;
 }(_react2.default.Component);
 
-exports.default = RightBanner;
+exports.default = List;

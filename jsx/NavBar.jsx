@@ -1,25 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Configuration from "./configuration.json";
+
 
 class NavBar extends React.Component {
     constructor(props) {
         super(props);
     }
 
-    navigate(location) {
-        this.props.navigate(location);
-    }
-
     render() {
-        let sections = ["home", "lab", "bio", "research", "students"]
-        let nav_components = []
-        sections.map((x) => { nav_components.push(<li className="btn btn-default" onClick={ this.navigate.bind(this, x) }> { x } </li>) })
+        let nav_components = [];
+        (Configuration).forEach(
+            (x) => { 
+                console.log(x)
+                nav_components.push(<h5> x["diagnosis"] </h5>)
+            }
+        )
         return(
-            <nav className="nav nav-tabs nav-justified">
-                { nav_components }
-            </nav>
+            <div>
+                <h1>NavBar </h1>
+            </div>
         )
     }
 }
 
 export default NavBar
+

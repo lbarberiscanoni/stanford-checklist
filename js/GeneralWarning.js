@@ -22,46 +22,42 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Project = function (_React$Component) {
-    _inherits(Project, _React$Component);
+var GeneralWarning = function (_React$Component) {
+    _inherits(GeneralWarning, _React$Component);
 
-    function Project(props) {
-        _classCallCheck(this, Project);
+    function GeneralWarning(props) {
+        _classCallCheck(this, GeneralWarning);
 
-        return _possibleConstructorReturn(this, (Project.__proto__ || Object.getPrototypeOf(Project)).call(this, props));
+        return _possibleConstructorReturn(this, (GeneralWarning.__proto__ || Object.getPrototypeOf(GeneralWarning)).call(this, props));
     }
 
-    _createClass(Project, [{
+    _createClass(GeneralWarning, [{
         key: "render",
         value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "thumbnail" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "caption" },
+            var warnings = ["CALL FOR HELP", "CALL FOR CODE CART", "INFORM TEAM"];
+            var items = [];
+            warnings.map(function (x) {
+                items.push(_react2.default.createElement(
+                    "h4",
+                    null,
                     _react2.default.createElement(
-                        "h3",
+                        "li",
                         null,
-                        this.props.title
-                    ),
-                    _react2.default.createElement(
-                        "h4",
-                        { className: "text-muted" },
-                        this.props.status,
+                        " ",
+                        x,
                         " "
-                    ),
-                    _react2.default.createElement(
-                        "p",
-                        null,
-                        this.props.content
                     )
-                )
+                ));
+            });
+            return _react2.default.createElement(
+                "ol",
+                null,
+                items
             );
         }
     }]);
 
-    return Project;
+    return GeneralWarning;
 }(_react2.default.Component);
 
-exports.default = Project;
+exports.default = GeneralWarning;
