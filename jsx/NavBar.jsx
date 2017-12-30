@@ -10,15 +10,16 @@ class NavBar extends React.Component {
 
     render() {
         let nav_components = [];
-        (Configuration).forEach(
-            (x) => { 
-                console.log(x)
-                nav_components.push(<h5> x["diagnosis"] </h5>)
-            }
-        )
+		//console.log(Configuration);
+		(Configuration).forEach(
+			(x) => { 
+				console.log(x);
+				nav_components.push(<h5> { JSON.parse(x)["diagnosis_name"] }</h5>)
+			}
+		)
         return(
             <div>
-                <h1>NavBar </h1>
+                { nav_components }
             </div>
         )
     }

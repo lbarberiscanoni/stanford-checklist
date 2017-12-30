@@ -209,22 +209,20 @@ var NavBar = function (_React$Component) {
         key: "render",
         value: function render() {
             var nav_components = [];
+            //console.log(Configuration);
             _configuration2.default.forEach(function (x) {
                 console.log(x);
                 nav_components.push(_react2.default.createElement(
                     "h5",
                     null,
-                    " x[\"diagnosis\"] "
+                    " ",
+                    JSON.parse(x)["diagnosis_name"]
                 ));
             });
             return _react2.default.createElement(
                 "div",
                 null,
-                _react2.default.createElement(
-                    "h1",
-                    null,
-                    "NavBar "
-                )
+                nav_components
             );
         }
     }]);
@@ -302,35 +300,7 @@ var Page = function (_React$Component) {
 
 exports.default = Page;
 },{"./GeneralWarning":1,"./List":2,"react":31,"react-dom":28}],5:[function(require,module,exports){
-module.exports=[
-    {
-        "diagnosis": "full name A",
-        "location": "shortened name",
-        "signs": "",
-        "immediate": "",
-        "diagnosis": "",
-        "secondary": "",
-        "details": "",
-        "check": "",
-        "consider": "",
-        "rule-out": "",
-        "post-event": ""
-    },
-    {
-        "diagnosis": "full name B",
-        "location": "shortened name",
-        "signs": "",
-        "immediate": "",
-        "diagnosis": "",
-        "secondary": "",
-        "details": "",
-        "check": "",
-        "consider": "",
-        "rule-out": "",
-        "post-event": ""
-    }
-]
-
+module.exports=["{\"rule-out\": \"\", \"location\": \"asystole\", \"signs\": \"\", \"diagnosis_name\": \"Asystole\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"bradycardia_-_unstable\", \"signs\": \"\", \"diagnosis_name\": \"Bradycardia - Unstable\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"pea\", \"signs\": \"\", \"diagnosis_name\": \"PEA\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"svt_-_stable_tachycardia\", \"signs\": \"\", \"diagnosis_name\": \"SVT - Stable Tachycardia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"svt_-_unstable_tachycardia\", \"signs\": \"\", \"diagnosis_name\": \"SVT - Unstable Tachycardia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"vf/vt\", \"signs\": \"\", \"diagnosis_name\": \"VF/VT\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"hypotension\", \"signs\": \"\", \"diagnosis_name\": \"Hypotension\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"hypoxemia\", \"signs\": \"\", \"diagnosis_name\": \"Hypoxemia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"amniotic_fluid_embolism\", \"signs\": \"\", \"diagnosis_name\": \"Amniotic Fluid Embolism\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"anaphylaxis\", \"signs\": \"\", \"diagnosis_name\": \"Anaphylaxis\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"bradycardia_-_unstable\", \"signs\": \"\", \"diagnosis_name\": \"Bradycardia - Unstable\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"bronchospasm\", \"signs\": \"\", \"diagnosis_name\": \"Bronchospasm\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"delayed_emergence\", \"signs\": \"\", \"diagnosis_name\": \"Delayed Emergence\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"difficult_airway_-_unanticipated\", \"signs\": \"\", \"diagnosis_name\": \"Difficult Airway - Unanticipated\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"fire_-_airway\", \"signs\": \"\", \"diagnosis_name\": \"Fire - Airway\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"fire_-_patient\", \"signs\": \"\", \"diagnosis_name\": \"Fire - Patient\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"hemorrhage_-_mtg\", \"signs\": \"\", \"diagnosis_name\": \"Hemorrhage - MTG\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"hypotension\", \"signs\": \"\", \"diagnosis_name\": \"Hypotension\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"hypoxemia\", \"signs\": \"\", \"diagnosis_name\": \"Hypoxemia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"local_anesthetic_toxicity\", \"signs\": \"\", \"diagnosis_name\": \"Local Anesthetic Toxicity\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"malignant_hyperthermia\", \"signs\": \"\", \"diagnosis_name\": \"Malignant Hyperthermia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"myocardial_ischemia\", \"signs\": \"\", \"diagnosis_name\": \"Myocardial Ischemia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"oxygen_failure\", \"signs\": \"\", \"diagnosis_name\": \"Oxygen Failure\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"pea\", \"signs\": \"\", \"diagnosis_name\": \"PEA\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"pneumothorax\", \"signs\": \"\", \"diagnosis_name\": \"Pneumothorax\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"power_failure\", \"signs\": \"\", \"diagnosis_name\": \"Power Failure\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"svt_-_stable_tachycardia\", \"signs\": \"\", \"diagnosis_name\": \"SVT - Stable Tachycardia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"svt_-_unstable_tachycardia\", \"signs\": \"\", \"diagnosis_name\": \"SVT - Unstable Tachycardia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"total_spinal_anesthesia\", \"signs\": \"\", \"diagnosis_name\": \"Total Spinal Anesthesia\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"transfusion_reaction\", \"signs\": \"\", \"diagnosis_name\": \"Transfusion Reaction\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"venous_air_embolus\", \"signs\": \"\", \"diagnosis_name\": \"Venous Air Embolus\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"vf/vt\", \"signs\": \"\", \"diagnosis_name\": \"VF/VT\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}", "{\"rule-out\": \"\", \"location\": \"phone_list\", \"signs\": \"\", \"diagnosis_name\": \"Phone List\", \"details\": \"\", \"post-event\": \"\", \"consider\": \"\", \"check\": \"\", \"immediate\": \"\", \"secondary\": \"\"}"]
 },{}],6:[function(require,module,exports){
 "use strict";
 
@@ -18428,10 +18398,6 @@ process.off = noop;
 process.removeListener = noop;
 process.removeAllListeners = noop;
 process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
 
 process.binding = function (name) {
     throw new Error('process.binding is not supported');

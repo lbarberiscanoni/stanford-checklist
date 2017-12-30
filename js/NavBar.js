@@ -39,22 +39,20 @@ var NavBar = function (_React$Component) {
         key: "render",
         value: function render() {
             var nav_components = [];
+            //console.log(Configuration);
             _configuration2.default.forEach(function (x) {
                 console.log(x);
                 nav_components.push(_react2.default.createElement(
                     "h5",
                     null,
-                    " x[\"diagnosis\"] "
+                    " ",
+                    JSON.parse(x)["diagnosis_name"]
                 ));
             });
             return _react2.default.createElement(
                 "div",
                 null,
-                _react2.default.createElement(
-                    "h1",
-                    null,
-                    "NavBar "
-                )
+                nav_components
             );
         }
     }]);
