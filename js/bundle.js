@@ -206,17 +206,25 @@ var NavBar = function (_React$Component) {
     }
 
     _createClass(NavBar, [{
+        key: "navigate",
+        value: function navigate(location) {
+            this.props.navigate(location);
+        }
+    }, {
         key: "render",
         value: function render() {
+            var _this2 = this;
+
             var nav_components = [];
             //console.log(Configuration);
             _configuration2.default.forEach(function (x) {
                 console.log(x);
+                var section = JSON.parse(x)["diagnosis_name"];
                 nav_components.push(_react2.default.createElement(
                     "h5",
-                    null,
+                    { onClick: _this2.navigate.bind(_this2, section) },
                     " ",
-                    JSON.parse(x)["diagnosis_name"]
+                    section
                 ));
             });
             return _react2.default.createElement(
@@ -347,12 +355,20 @@ var Hello = function (_React$Component) {
     }
 
     _createClass(Hello, [{
+        key: "navigate",
+        value: function navigate(newLocation) {
+            alert(newLocation);
+            //this.setState({
+            //		"location": newLocation,
+            //	})
+        }
+    }, {
         key: "render",
         value: function render() {
             //let config = ["touch your nose", "belly dance"];
             switch (this.state.location) {
                 case "home":
-                    return _react2.default.createElement(_NavBar2.default, null);
+                    return _react2.default.createElement(_NavBar2.default, { navigate: this.navigate.bind(this) });
                     break;
                 default:
                     return _react2.default.createElement(_Page2.default, { bro: config, diagnosis: "Asystole" });

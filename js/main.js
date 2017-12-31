@@ -43,12 +43,20 @@ var Hello = function (_React$Component) {
     }
 
     _createClass(Hello, [{
+        key: "navigate",
+        value: function navigate(newLocation) {
+            alert(newLocation);
+            //this.setState({
+            //		"location": newLocation,
+            //	})
+        }
+    }, {
         key: "render",
         value: function render() {
             //let config = ["touch your nose", "belly dance"];
             switch (this.state.location) {
                 case "home":
-                    return _react2.default.createElement(_NavBar2.default, null);
+                    return _react2.default.createElement(_NavBar2.default, { navigate: this.navigate.bind(this) });
                     break;
                 default:
                     return _react2.default.createElement(_Page2.default, { bro: config, diagnosis: "Asystole" });

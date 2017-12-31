@@ -12,12 +12,19 @@ class Hello extends React.Component {
         }
     }
 
+	navigate(newLocation) { 
+		alert(newLocation)
+		//this.setState({
+	//		"location": newLocation,
+	//	})
+	}
+
     render() {
         //let config = ["touch your nose", "belly dance"];
         switch(this.state.location) { 
             case "home":
                 return(
-                    <NavBar />
+                    <NavBar navigate={ this.navigate.bind(this) }/>
                 )
                 break;
             default:
