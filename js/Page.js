@@ -56,7 +56,7 @@ var Page = function (_React$Component) {
                     "By Stanford Anesthesia Cognitive Aid Group"
                 ),
                 _react2.default.createElement(_GeneralWarning2.default, null),
-                _react2.default.createElement(_List2.default, { type: "informational", legend: "Immediate", elements: this.props.bro })
+                _react2.default.createElement(_List2.default, { type: "checklist", legend: "Immediate", elements: this.props.bro })
             );
         }
     }]);

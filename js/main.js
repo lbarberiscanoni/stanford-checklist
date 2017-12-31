@@ -45,10 +45,9 @@ var Hello = function (_React$Component) {
     _createClass(Hello, [{
         key: "navigate",
         value: function navigate(newLocation) {
-            alert(newLocation);
-            //this.setState({
-            //		"location": newLocation,
-            //	})
+            this.setState({
+                "location": newLocation
+            });
         }
     }, {
         key: "render",
@@ -62,7 +61,8 @@ var Hello = function (_React$Component) {
                     );
                     break;
                 default:
-                    return _react2.default.createElement(_Page2.default, { bro: config, diagnosis: "Asystole" });
+                    var config = ["belly dance", "touch your nose"];
+                    return _react2.default.createElement(_Page2.default, { bro: config, diagnosis: this.state.location });
             }
         }
     }]);

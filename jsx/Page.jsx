@@ -14,7 +14,7 @@ class Page extends React.Component {
                 <h1>{ this.props.diagnosis }</h1>
                 <p>By Stanford Anesthesia Cognitive Aid Group</p>
                 <GeneralWarning />
-                <List type="informational" legend="Immediate" elements={ this.props.bro } />
+                <List type="checklist" legend="Immediate" elements={ this.props.bro } />
             </div>
         )
     }

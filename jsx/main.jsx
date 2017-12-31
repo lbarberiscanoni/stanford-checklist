@@ -13,10 +13,9 @@ class Hello extends React.Component {
     }
 
 	navigate(newLocation) { 
-		alert(newLocation)
-		//this.setState({
-	//		"location": newLocation,
-	//	})
+		this.setState({
+			"location": newLocation,
+		})
 	}
 
     render() {
@@ -29,8 +28,9 @@ class Hello extends React.Component {
                 )
                 break;
             default:
+				let config = ["belly dance", "touch your nose"]
                 return(
-                    <Page bro={ config } diagnosis="Asystole" />
+                    <Page bro={ config } diagnosis={ this.state.location } />
                 )
         }
     }
