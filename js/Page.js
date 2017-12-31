@@ -46,6 +46,11 @@ var Page = function (_React$Component) {
                 "div",
                 null,
                 _react2.default.createElement(
+                    "button",
+                    { onClick: this.props.navigate.bind(this, "home") },
+                    "HOME"
+                ),
+                _react2.default.createElement(
                     "h1",
                     null,
                     this.props.diagnosis

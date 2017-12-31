@@ -30,7 +30,7 @@ class Hello extends React.Component {
             default:
 				let config = ["belly dance", "touch your nose"]
                 return(
-                    <Page bro={ config } diagnosis={ this.state.location } />
+                    <Page navigate={ this.navigate.bind(this)} bro={ config } diagnosis={ this.state.location } />
                 )
         }
     }

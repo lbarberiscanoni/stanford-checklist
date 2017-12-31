@@ -216,6 +216,11 @@ var Page = function (_React$Component) {
                 "div",
                 null,
                 _react2.default.createElement(
+                    "button",
+                    { onClick: this.props.navigate.bind(this, "home") },
+                    "HOME"
+                ),
+                _react2.default.createElement(
                     "h1",
                     null,
                     this.props.diagnosis
@@ -395,7 +400,7 @@ var Hello = function (_React$Component) {
                     break;
                 default:
                     var config = ["belly dance", "touch your nose"];
-                    return _react2.default.createElement(_Page2.default, { bro: config, diagnosis: this.state.location });
+                    return _react2.default.createElement(_Page2.default, { navigate: this.navigate.bind(this), bro: config, diagnosis: this.state.location });
             }
         }
     }]);

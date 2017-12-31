@@ -11,6 +11,7 @@ class Page extends React.Component {
     render() {
         return(
             <div>
+				<button onClick={ this.props.navigate.bind(this, "home") }>HOME</button>
                 <h1>{ this.props.diagnosis }</h1>
                 <p>By Stanford Anesthesia Cognitive Aid Group</p>
                 <GeneralWarning />
