@@ -14,9 +14,9 @@ var _Page = require("./Page");
 
 var _Page2 = _interopRequireDefault(_Page);
 
-var _NavBar = require("./NavBar");
+var _SearchBar = require("./SearchBar");
 
-var _NavBar2 = _interopRequireDefault(_NavBar);
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -53,10 +53,13 @@ var Hello = function (_React$Component) {
     }, {
         key: "render",
         value: function render() {
-            //let config = ["touch your nose", "belly dance"];
             switch (this.state.location) {
                 case "home":
-                    return _react2.default.createElement(_NavBar2.default, { navigate: this.navigate.bind(this) });
+                    return _react2.default.createElement(
+                        "div",
+                        null,
+                        _react2.default.createElement(_SearchBar2.default, { navigate: this.navigate.bind(this) })
+                    );
                     break;
                 default:
                     return _react2.default.createElement(_Page2.default, { bro: config, diagnosis: "Asystole" });

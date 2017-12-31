@@ -14,7 +14,8 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "react-search-input": "^0.11.3"
   },
   "devDependencies": {
     "json-loader": "^0.5.7"
